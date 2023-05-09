@@ -5,16 +5,66 @@
         *{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: 100;
+            margin:auto;
         }
+        .background{
+            /*Sets background image to opaque without affecting other things*/
+            background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+            url("background.jpg");
+            z-index: -1;
+            background-repeat: none;
+            background-attachment: fixed;
+        }
+        header{
+            background-color: black;
+            height: 100px;
+            position:sticky; /*Keeps it showing at top during scroll*/
+            top:0;
+            float: ;
+        }
+
+        form{
+            background-color: whitesmoke;
+            margin: 50px 200px;
+            z-index:1;
+            padding: 50px;
+        }
+
         fieldset{
             border: none;
         }
         legend{
             font-weight: bolder;
         }
+        .button{
+            margin:10px;
+            position:relative;
+            text-align: center;
+
+        }
+        .icon{
+            float:right;
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+        }
+        footer{
+            background-color: black;
+            position:sticky; /*Keeps it showing at top during scroll*/
+            bottom:0;
+            height: 30px;
+        }
     </style>
 </head>
-<body>
+<body class="background">
+    <header>
+        <div class="">
+            <img src="pinterest.png" class="icon">
+            <img src="twitter.png" class="icon">
+            <img src="instagram.png" class="icon">
+            <img src="facebook.png" class="icon">
+        </div>
+    </header>
 <form>
     <fieldset>
     <legend>Personal Information: </legend>
@@ -82,10 +132,11 @@
     <input type="radio" id="Hispanic" name="race" value="Hispanic">
     <label for="Hispanic">Hispanic</label><br>
     </fieldset>
-<br><br>
-    <input type="submit" value="Submit">
-
+    <input type="submit" value="Submit" class="button">
 </form>
 
-</body></bod>
+
+<footer>
+</footer>
+</body>
 </html>
